@@ -6,8 +6,11 @@
 trigger:
 - main
 
+variables:
+  osystem : windows-latest
+
 pool:
-  vmImage: windows-latest
+  vmImage: $(operatings)
 
 steps:
 - task: Maven@1
