@@ -7,7 +7,7 @@ trigger:
 - main
 
 variables:
-- group : new variable
+- group : New variable
 - name : sample
 
 pool:
