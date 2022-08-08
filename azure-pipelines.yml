@@ -7,9 +7,8 @@ trigger:
 - main
 
 variables:
-  group : new variable
-  name : sample
-  osystem : windows-latest
+- group : new variable
+- name : sample
 
 pool:
   vmImage: sample
