@@ -11,7 +11,7 @@ variables:
 - name : sample
 
 pool:
-  vmImage: sample
+  vmImage: $(sample)
 
 steps:
 - task: Maven@1
