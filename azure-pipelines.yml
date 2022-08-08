@@ -10,7 +10,7 @@ variables:
   osystem : windows-latest
 
 pool:
-  vmImage: $(sample)
+  vmImage: sample
 
 steps:
 - task: Maven@1
