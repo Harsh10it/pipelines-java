@@ -30,13 +30,8 @@ steps:
   inputs:
     targetFolder: '$(Build.ArtifactStagingDirectory)'    
  
-# - task: PublishBuildArtifacts@1    
-#   displayName: 'Publish Artifact: drop'
-#   inputs:
-#     PathtoPublish: '$(build.artifactstagingdirectory)'
-
-# steps:
-- task: PublishPipelineArtifact@1
+- task: PublishBuildArtifacts@1    
+  displayName: 'Publish Artifact: drop'
   inputs:
-    targetPath: $(System.DefaultWorkingDirectory)/bin/demo
-    artifactName: demo
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+
