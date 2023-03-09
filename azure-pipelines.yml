@@ -7,8 +7,8 @@ trigger:
 - main
 
 variables:
-- group : New variable
 - group : demo
+- group : New variable
 
 pool:
   vmImage: $(sample)
