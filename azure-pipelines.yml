@@ -11,7 +11,7 @@ variables:
 - group : demo
 
 pool:
-  vmImage: $(sample1)
+  vmImage: $(sample)
 
 steps:
 - task: Maven@1
