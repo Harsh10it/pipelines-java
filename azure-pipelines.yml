@@ -8,9 +8,10 @@ trigger:
 
 variables:
 - group : New variable
+- group : demo
 
 pool:
-  vmImage: $(sample)
+  vmImage: $(sample1)
 
 steps:
 - task: Maven@1
