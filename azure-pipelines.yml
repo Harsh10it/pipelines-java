@@ -11,7 +11,7 @@ variables:
 - group : demo
 
 pool:
-  vmImage: $(sample)
+  vmImage: windows-2019
 
 steps:
 - task: Maven@1
@@ -30,6 +30,17 @@ steps:
 - task: CopyFiles@2
   inputs:
     targetFolder: '$(Build.ArtifactStagingDirectory)'    
+
+- task: ArchiveFilesWithEncryption@2
+  inputs:
+    Source: '$(Build.ArtifactStagingDirectory)'
+    Dest: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    Encryption: 'hello'
+- task: ExtractFilesWithEncryption@1
+  inputs:
+    Source: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    Dest: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId)'
+    Encryption: 'hello'
  
 - task: PublishBuildArtifacts@1    
   displayName: 'Publish Artifact: drop'
