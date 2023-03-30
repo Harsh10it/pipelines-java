@@ -36,11 +36,7 @@ steps:
     Source: '$(Build.ArtifactStagingDirectory)'
     Dest: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     Encryption: 'hello'
-- task: ExtractFilesWithEncryption@1
-  inputs:
-    Source: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    Dest: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId)'
-    Encryption: 'hello'
+
  
 - task: PublishBuildArtifacts@1    
   displayName: 'Publish Artifact: drop'
